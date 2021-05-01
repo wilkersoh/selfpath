@@ -1,5 +1,9 @@
 😊 We Stayed Private.
 
+# master branch is a public repo
+
+# private branch hold all source code
+
 #Build with
 
 1. NextJs
