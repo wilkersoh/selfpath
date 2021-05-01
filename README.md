@@ -1,3 +1,5 @@
+😊 We Stayed Private.
+
 #Build with
 
 1. NextJs
