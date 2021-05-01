@@ -1,11 +1,15 @@
 @tailwind base;
+@layer base {
+  @import url("./fonts/index.css");
+  @import url("./base/index.css");
+}
+
 @tailwind components;
+@layer components {
+  @import url("./components/index.css");
+}
+
 @tailwind utilities;
-
-/* @import "tailwindcss/base";
-@import url("./base/index.css");
-
-@import "tailwindcss/components";
-@import url("./components/index.css");
-
-@import "tailwindcss/utilities"; */
+@layer utilities {
+  @import url("./utilities/index.css");
+}

@@ -6,3 +6,5 @@
 4. ApploClient
 5. Typescript
 6. React-query
+7. Transition group
+8. SEO Support

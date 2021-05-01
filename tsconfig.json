@@ -5,6 +5,12 @@
       "@/components/*": [
         "components/*"
       ],
+      "@/interfaces/*": [
+        "interfaces/*"
+      ],
+      "@/icons/*": [
+        "icons/*"
+      ]
     },
     "target": "es5",
 
