@@ -4,8 +4,6 @@
 
 # private branch hold all source code
 
-# private rename in remote to master
-
 #Build with
 
 1. NextJs
