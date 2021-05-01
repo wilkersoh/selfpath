@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div>
+    <div className='green'>
       <div>i am footers</div>
     </div>
   );
