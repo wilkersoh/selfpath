@@ -12,6 +12,9 @@ module.exports = {
       colors: {
         "brand-blue": "#060042",
       },
+      zIndex: {
+        "-10": "-10",
+      },
     },
   },
   variants: {

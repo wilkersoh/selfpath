@@ -4,6 +4,10 @@
   fade-exit, fade-exit-active, fade-exit-done
 */
 
+/* Adding the appear prop to display transition on load (must add appear in CssTransiton) */
+.sidebar-transition-appear #aside {
+}
+
 /* This fires as soon as the element enters the DOM */
 .sidebar-transition-enter #aside {
   opacity: 0;
@@ -13,11 +17,26 @@
 .sidebar-transition-enter-active #aside {
   left: 0;
   opacity: 1;
-  transition: opacity 450ms, left 550ms;
+  transition: opacity 0.65s, left 0.65s cubic-bezier(0.65, 0, 0.35, 1);
 }
+
 .sidebar-transition-enter-done #aside {
   left: 0;
 }
+
+.sidebar-transition-enter #aside-overlay {
+  opacity: 0;
+  display: block;
+}
+.sidebar-transition-enter-active #aside-overlay {
+  opacity: 0.5;
+  transition: opacity 0.45s;
+}
+.sidebar-transition-enter-done #aside-overlay {
+  opacity: 0.5;
+  display: block;
+}
+
 /* This fires as soon as the this.state.showList is false */
 .sidebar-transition-exit #aside {
   left: 0;
@@ -25,7 +44,7 @@
 /* fires as element leaves the DOM*/
 .sidebar-transition-exit-active #aside {
   left: -100%;
-  transition: left 550ms;
+  transition: left 0.65s cubic-bezier(0.65, 0, 0.35, 1);
 }
 /* after done */
 .sidebar-transition-exit-done #aside {
