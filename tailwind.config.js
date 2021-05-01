@@ -1,4 +1,5 @@
 // const defaultTheme = require("tailwindcss/defaultTheme");
+// const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -7,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ["NunitoExBold", "Helvetica Neue", "sans-serif"],
+      },
+      colors: {
+        "brand-blue": "#060042",
       },
     },
   },

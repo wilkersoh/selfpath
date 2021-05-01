@@ -12,4 +12,14 @@
 @tailwind utilities;
 @layer utilities {
   @import url("./utilities/index.css");
+  @import url("./transition/index.css");
+  body {
+    background-color: #f9fafb;
+  }
 }
+
+/*
+Nav background-color: #060042;
+body background-color: #f9fafb;
+
+*/
