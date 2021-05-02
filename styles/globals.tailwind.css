@@ -2,6 +2,13 @@
 @layer base {
   @import url("./fonts/index.css");
   @import url("./base/index.css");
+  h1 {
+    @apply font-heading text-2xl;
+  }
+  h2,
+  h3 {
+    @apply font-heading text-xl;
+  }
 }
 
 @tailwind components;
@@ -13,13 +20,9 @@
 @layer utilities {
   @import url("./utilities/index.css");
   @import url("./transition/index.css");
-  body {
-    background-color: #f9fafb;
+
+  main {
+    background: #0d141c;
+    color: white;
   }
 }
-
-/*
-Nav background-color: #060042;
-body background-color: #f9fafb;
-
-*/

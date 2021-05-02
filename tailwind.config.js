@@ -10,7 +10,8 @@ module.exports = {
         heading: ["NunitoExBold", "Helvetica Neue", "sans-serif"],
       },
       colors: {
-        "brand-blue": "#060042",
+        "brand-green": "#a3f8c3",
+        "brand-red": "#ff0a78",
       },
       zIndex: {
         "-10": "-10",
