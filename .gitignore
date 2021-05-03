@@ -32,3 +32,16 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# avoid up to public
+/components
+/pages
+/styles
+/utils
+yarn.lock
+pm2.json
+tailwind.config.js
+next.config.js
+package.json
+tsconfig.json
+

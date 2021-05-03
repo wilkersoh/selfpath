@@ -5,11 +5,17 @@
       "@/components/*": [
         "components/*"
       ],
+      "@/articles/*": [
+        "articles/*"
+      ],
       "@/interfaces/*": [
         "interfaces/*"
       ],
       "@/icons/*": [
         "icons/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
       ]
     },
     "target": "es5",
@@ -29,12 +35,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+        "types": [
+          "node",
+          "webpack-env"
+        ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
   ],
   "exclude": [
     "node_modules"
