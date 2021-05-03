@@ -9,7 +9,7 @@ const index = ({ post }) => {
     link,
     module: { meta },
   } = post;
-  console.log("post :>> ", post);
+
   return (
     <article className='mb-12'>
       <Link href={`blogs/${link}`}>

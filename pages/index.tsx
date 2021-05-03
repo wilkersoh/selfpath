@@ -7,7 +7,7 @@ import { posts } from "@/utils/getAllPosts";
 
 export default function Home(props) {
   const [latestPosts, setLatestPosts] = useState([]);
-
+  console.log("posts :>> ", posts);
   useEffect(() => {
     const getLatest = posts
       .sort((a, b) => {
@@ -39,18 +39,3 @@ export default function Home(props) {
     </Layout>
   );
 }
-
-// export async function getStaticProps(context) {
-//   const getLatest = posts.sort((a, b) => {
-//     return (
-//       new Date(b.module.meta.date).getTime() -
-//       new Date(a.module.meta.date).getTime()
-//     );
-//   });
-
-//   return {
-//     props: {
-//       data: JSON.stringify(getLatest),
-//     },
-//   };
-// }

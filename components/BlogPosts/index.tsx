@@ -1,12 +1,26 @@
 import React from "react";
+import { MDXProvider } from "@mdx-js/react";
 import HeadPost from "@/components/BlogPosts/HeadPost";
+import { Heading } from "./elements/Heading";
+
 import { MetaPostProps } from "./interfaces";
+
+const components = {
+  // img: Image,
+  h2: Heading,
+  // h2: Heading.H2,
+  // p: Text,
+  // code: Pre,
+  // inlineCode: Code,
+};
 
 const index: React.FC<MetaPostProps> = ({ children, meta }) => {
   return (
     <>
       <HeadPost meta={meta} />
-      <article>{children}</article>
+      <MDXProvider components={components}>
+        <article className='blue'>{children}</article>
+      </MDXProvider>
     </>
   );
 };
