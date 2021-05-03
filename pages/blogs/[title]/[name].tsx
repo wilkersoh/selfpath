@@ -4,6 +4,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { posts } from "@/utils/getAllPosts";
 
 import BasicBlogLayout from "@/components/Layout/BasicBlogLayout";
+import BlogContent from "@/articles/react/hook.mdx";
 
 interface BlogProps {
   filePath: string;
@@ -11,9 +12,9 @@ interface BlogProps {
 
 const Blog = ({ filePath }: BlogProps) => {
   /* Not really right way to use dynamic in here (can read docs) */
-  const BlogContent = dynamic(
-    () => import(`../../../articles/${filePath}.mdx`)
-  );
+  // const BlogContent = dynamic(
+  //   () => import(`../../../articles/${filePath}.mdx`)
+  // );
 
   return (
     <BasicBlogLayout>
