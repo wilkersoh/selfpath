@@ -1,13 +1,11 @@
 import React from "react";
 import Container from "@/components/Container";
 import Hamburger from "@/components/Header/icons/Hamburger";
-import Wave from "@/components/Header/icons/Wave";
 import Logo from "@/components/Header/icons/Logo";
 
-const index = () => {
+const BlogHeader = () => {
   return (
-    <div className='relative h-52 md:h-96 main-header-bg'>
-      <div className='h-12 w-12 red hidden md:block'></div>
+    <div className='relative bg-brand-black '>
       <div className='sticky top-0 z-10'>
         <Container>
           <header className='flex items-center h-14'>
@@ -21,11 +19,8 @@ const index = () => {
           </header>
         </Container>
       </div>
-      <div className='absolute bottom-0'>
-        <Wave />
-      </div>
     </div>
   );
 };
 
-export default index;
+export default BlogHeader;

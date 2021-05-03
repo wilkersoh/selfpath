@@ -1,10 +1,56 @@
-import App from "@/components/App";
-import Head from "next/head";
+import { useEffect, useState } from "react";
+import Container from "@/components/Container";
+import Layout from "@/components/Layout";
+import PreviewPost from "@/components/PreviewPost/index";
 
-export default function Home() {
+import { posts } from "@/utils/getAllPosts";
+
+export default function Home(props) {
+  const [latestPosts, setLatestPosts] = useState([]);
+
+  useEffect(() => {
+    const getLatest = posts
+      .sort((a, b) => {
+        return (
+          new Date(b.module.meta.date).getTime() -
+          new Date(a.module.meta.date).getTime()
+        );
+      })
+      .slice(0, 6);
+
+    setLatestPosts(getLatest);
+  }, []);
+
   return (
-    <App>
-      <h1 className='bg-red-200'>this should be main section</h1>
-    </App>
+    <Layout>
+      <Container>
+        <section>
+          <div className='pt-16 pb-8'>
+            <h2 className='antialiased text-brand-red text-red-shadow text-sm'>
+              最新更新
+            </h2>
+          </div>
+          {/* Blog posts */}
+          {latestPosts.map((post, i) => (
+            <PreviewPost key={i} post={post} />
+          ))}
+        </section>
+      </Container>
+    </Layout>
   );
 }
+
+// export async function getStaticProps(context) {
+//   const getLatest = posts.sort((a, b) => {
+//     return (
+//       new Date(b.module.meta.date).getTime() -
+//       new Date(a.module.meta.date).getTime()
+//     );
+//   });
+
+//   return {
+//     props: {
+//       data: JSON.stringify(getLatest),
+//     },
+//   };
+// }
