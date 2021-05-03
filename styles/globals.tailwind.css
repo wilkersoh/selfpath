@@ -2,12 +2,23 @@
 @layer base {
   @import url("./fonts/index.css");
   @import url("./base/index.css");
+  body {
+    color: white;
+  }
+  main {
+    background: #0d141c;
+  }
   h1 {
     @apply font-heading text-2xl;
   }
-  h2,
-  h3 {
+  h2 {
     @apply font-heading text-xl;
+  }
+  h3 {
+    @apply font-heading text-lg;
+  }
+  p {
+    @apply text-sm;
   }
 }
 
@@ -20,9 +31,4 @@
 @layer utilities {
   @import url("./utilities/index.css");
   @import url("./transition/index.css");
-
-  main {
-    background: #0d141c;
-    color: white;
-  }
 }
