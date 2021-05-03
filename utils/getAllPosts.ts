@@ -1,3 +1,15 @@
+interface PostsType {
+  link: string;
+  module: {
+    meta: {
+      title: string;
+      description: string;
+      date: string;
+      readTime: number;
+    }
+  }
+}
+
 const importAll = (r) => {
   return r.keys().map(fileName => {
     let [title, name] = fileName.substr(2).split("/");
@@ -15,4 +27,4 @@ const importAll = (r) => {
 
 }
 
-export const posts = importAll(require.context("articles", true, /\.mdx$/));
+export const posts: Array<PostsType> = importAll(require.context("articles", true, /\.mdx$/));
