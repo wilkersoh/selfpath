@@ -1,20 +1,28 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { posts } from "@/utils/getAllPosts";
 
 import BasicBlogLayout from "@/components/Layout/BasicBlogLayout";
-import BlogContent from "@/articles/react/hook.mdx";
 
 interface BlogProps {
   filePath: string;
 }
 
 const Blog = ({ filePath }: BlogProps) => {
+  const router = useRouter();
+
+  // If the page is not yet generated, this will be displayed
+  // initially until getStaticProps() finishes running
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
+
   /* Not really right way to use dynamic in here (can read docs) */
-  // const BlogContent = dynamic(
-  //   () => import(`../../../articles/${filePath}.mdx`)
-  // );
+  const BlogContent = dynamic(
+    () => import(`../../../articles/${filePath}.mdx`)
+  );
 
   return (
     <BasicBlogLayout>
@@ -45,6 +53,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       filePath: `${params.title}/${params.name}`,
+      revalidate: 1,
     },
   };
 };
