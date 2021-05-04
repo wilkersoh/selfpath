@@ -11,6 +11,10 @@
 7. Transition group
 8. SEO Support
 
+### Note
+
+1. @next/mdx (read local mdx file and render in pages folder)
+
 <!--
 https://www.joshwcomeau.com/blog/how-i-built-my-blog/
   getLatestContent (run in getStaticProps)
@@ -22,4 +26,4 @@ https://www.joshwcomeau.com/blog/how-i-built-my-blog/
 
 
 1. Logo Text make it 周圍發光
- -->
+-->
