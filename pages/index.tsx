@@ -5,7 +5,7 @@ import PreviewPost from "@/components/PreviewPost/index";
 
 import { posts } from "@/utils/getAllPosts";
 
-export default function Home(props) {
+export default function Home() {
   const [latestPosts, setLatestPosts] = useState([]);
   console.log("posts :>> ", posts);
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Home(props) {
   }, []);
 
   return (
-    <Layout>
+    <Layout type='home'>
       <Container>
         <section>
           <div className='pt-16 pb-8'>
@@ -35,6 +35,7 @@ export default function Home(props) {
             <PreviewPost key={i} post={post} />
           ))}
         </section>
+        {/* Do pagination for next 6 or 8 */}
       </Container>
     </Layout>
   );

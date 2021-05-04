@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 import Container from "@/components/Container";
 import Hamburger from "@/components/Header/icons/Hamburger";
 import Logo from "@/components/Header/icons/Logo";
@@ -10,7 +12,11 @@ const BlogHeader = () => {
         <Container>
           <header className='flex items-center h-14'>
             <div className='cursor-pointer text-white'>
-              <Logo />
+              <Link href='/'>
+                <a>
+                  <Logo />
+                </a>
+              </Link>
             </div>
             <nav className='hidden md:block'>i am nav for desktop</nav>
             <div className='md:hidden ml-auto mr-4'>
