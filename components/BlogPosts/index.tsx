@@ -1,30 +1,35 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import HeadPost from "@/components/BlogPosts/HeadPost";
-import { Heading } from "./elements/Heading";
+import { H1, H2, H3 } from "./elements/Heading";
+import Container from "@/components/Container";
 
 import { MetaPostProps } from "./interfaces";
+import CodeTemplate from "./CodeTemplate";
 
 const components = {
   // img: Image,
-  h2: Heading,
+  h2: H2,
   // h2: Heading.H2,
   // p: Text,
   // code: Pre,
   // inlineCode: Code,
+  code: CodeTemplate,
 };
 
 const index: React.FC<MetaPostProps> = ({ children, meta }) => {
   return (
     <>
       <HeadPost meta={meta} />
-      <MDXProvider components={components}>
-        <article className='blue'>{children}</article>
-      </MDXProvider>
+      <Container>
+        <MDXProvider components={components}>
+          <article className='blue px-2 sm:px-3 md:px-10 lg:px-0'>
+            {children}
+          </article>
+        </MDXProvider>
+      </Container>
     </>
   );
 };
-// mdxprovider 是把 markdown的 ul 那些 變成 你自己的 components裡面設計的
-// <MDXProvider components={components}><article>{children}</article></MDXProvider>
 
 export default index;
