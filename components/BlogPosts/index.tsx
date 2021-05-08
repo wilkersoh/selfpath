@@ -9,11 +9,10 @@ import CodeTemplate from "./CodeTemplate";
 
 const components = {
   // img: Image,
+  h1: H1,
   h2: H2,
-  // h2: Heading.H2,
+  h3: H3,
   // p: Text,
-  // code: Pre,
-  // inlineCode: Code,
   code: CodeTemplate,
 };
 
@@ -23,7 +22,7 @@ const index: React.FC<MetaPostProps> = ({ children, meta }) => {
       <HeadPost meta={meta} />
       <Container>
         <MDXProvider components={components}>
-          <article className='blue px-2 sm:px-3 md:px-10 lg:px-0'>
+          <article className='px-2 sm:px-3 md:px-10 lg:px-0'>
             {children}
           </article>
         </MDXProvider>
