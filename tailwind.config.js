@@ -17,14 +17,11 @@ module.exports = {
       zIndex: {
         "-10": "-10",
       },
-      fontSize: {
-        // bs: ['0.75rem', { lineHeight: '1rem' }],
-      },
     },
   },
   variants: {
     extend: {
-      margin: ["first", "responsive"],
+      margin: ["hover"],
     },
   },
   plugins: [],

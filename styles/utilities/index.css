@@ -1,4 +1,5 @@
 @import "./border.css";
-@import "./fonts.css";
 @import "./background.css";
+@import "./heading.css";
 @import "./shadow.css";
+@import "./MarkdownElement.css";

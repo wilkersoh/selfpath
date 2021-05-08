@@ -8,10 +8,10 @@ import Selfpaths from "@/components/Header/icons/Selfpaths";
 
 const index = () => {
   return (
-    <div className='relative h-52 md:h-96 main-header-bg'>
+    <div className='relative h-72 md:h-96 main-header-bg'>
       <div className='h-12 w-12 red hidden md:block'></div>
       <div className='sticky top-0 z-10'>
-        <Container maxWidth='max-w-7xl'>
+        <Container maxWidth='max-w-screen-xl'>
           <header className='flex items-center h-14'>
             <div className='cursor-pointer text-white'>
               <Link href='/'>
@@ -25,9 +25,12 @@ const index = () => {
               <Hamburger />
             </div>
           </header>
+          <div className='flex py-8'>
+            <h2 className='h1-title text-center'>Want to learn how to code?</h2>
+          </div>
         </Container>
       </div>
-      <div className='absolute bottom-0'>
+      <div className='absolute bottom-0 w-screen'>
         <Wave />
       </div>
     </div>

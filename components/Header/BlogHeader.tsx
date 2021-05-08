@@ -3,18 +3,18 @@ import Link from "next/link";
 
 import Container from "@/components/Container";
 import Hamburger from "@/components/Header/icons/Hamburger";
-import Logo from "@/components/Header/icons/Logo";
+import Selfpaths from "@/components/Header/icons/Selfpaths";
 
 const BlogHeader = () => {
   return (
     <div className='relative bg-brand-black '>
       <div className='sticky top-0 z-10'>
-        <Container>
+        <Container maxWidth='max-w-screen-xl'>
           <header className='flex items-center h-14'>
             <div className='cursor-pointer text-white'>
               <Link href='/'>
                 <a>
-                  <Logo />
+                  <Selfpaths />
                 </a>
               </Link>
             </div>

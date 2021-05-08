@@ -1,0 +1,17 @@
+.h1-title {
+  @apply font-heading;
+  font-size: clamp(2.25rem,6vw,4rem);
+  line-height: 1.1;
+}
+
+.h1 {
+  @apply font-heading text-2xl;
+}
+
+.h2 {
+  @apply font-heading text-xl;
+}
+
+.h3 {
+  @apply font-heading text-lg;
+}

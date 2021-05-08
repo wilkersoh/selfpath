@@ -1,7 +1,0 @@
-h1 {
-  @apply font-heading text-3xl;
-}
-
-h2 {
-  @apply font-heading text-2xl;
-}

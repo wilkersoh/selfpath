@@ -14,13 +14,13 @@ const index = ({ post }) => {
     <article className='mb-12'>
       <Link href={`blogs/${link}`}>
         <a>
-          <h3 className='pb-2'>{meta.title}</h3>
+          <h3 className='pb-3'>{meta.title}</h3>
           <p>{meta.description}</p>
-          <div className='flex items-center mt-3'>
+          <div className='flex items-center mt-3 group'>
             <p className='font-bold'>Read More</p>
-            <span className='my-auto ml-2'>
+            <div className='my-auto ml-2 transition duration-1000 group-hover:ml-10'>
               <Arrow />
-            </span>
+            </div>
           </div>
         </a>
       </Link>

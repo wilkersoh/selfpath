@@ -2,8 +2,6 @@ import React from "react";
 
 import HomeLayout from "@/components/Layout/HomeLayout";
 import BasicBlogLayout from "@/components/Layout/BasicBlogLayout";
-import Footer from "@/components/Footer/index";
-import Header from "@/components/Header/index";
 
 import LayoutProps from "./interface";
 

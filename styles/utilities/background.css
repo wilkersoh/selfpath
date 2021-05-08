@@ -1,6 +1,11 @@
 .main-header-bg {
   background: linear-gradient(to bottom, #040404, #17222b 70%);
 }
+
 .main-footer-bg {
   background: linear-gradient(to top, #040404, #17222b 70%);
+}
+
+.code-template-bg {
+  background-color: #131F29;
 }

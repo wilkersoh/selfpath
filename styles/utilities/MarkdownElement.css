@@ -1,0 +1,12 @@
+.mark-h1 {
+  @apply font-heading text-4xl;
+  color: blue;
+}
+.mark-h2 {
+  @apply font-heading text-3xl;
+  color: yellow;
+}
+.mark-h3 {
+  @apply font-heading text-2xl;
+  color: green;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-type MaxWidthType = "max-w-7xl" | "max-w-6xl";
+type MaxWidthType = "max-w-screen-xl" | "max-w-6xl";
 
 interface ContainerProps {
   classes?: string;

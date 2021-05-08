@@ -2,8 +2,15 @@
 @layer base {
   @import url("./fonts/index.css");
   @import url("./base/index.css");
+
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
   body {
     color: white;
+    background: #0d141c;
   }
   main {
     background: #0d141c;
