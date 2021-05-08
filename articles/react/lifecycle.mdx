@@ -15,3 +15,18 @@ export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia hic architecto voluptas sint, suscipit voluptatibus nesciunt consectetur? A dolorem, dolor at numquam ullam voluptatum ipsum molestiae quibusdam ratione veniam, impedit, laborum adipisci harum obcaecati magni illum sint corporis ad debitis?
 
 [linkName](https://selfpaths.com)
+
+```jsx
+import React, { useState } from "react";
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times!</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  );
+}
+```

@@ -4,12 +4,10 @@
 
 1. NextJs
 2. Tailwindcss
-3. GraphQL
-4. ApploClient
-5. Typescript
-6. React-query
-7. Transition group
-8. SEO Support
+3. Typescript
+4. Transition group
+5. SEO Support
+6. MDX
 
 ### Note
 
