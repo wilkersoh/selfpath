@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkPathsType } from "@/components/Header/interfaces";
+import { LinkPathsType } from "@/components/modules/Header/interfaces";
 
 const LinkPaths: LinkPathsType[] = [
   { route: "/", name: "home" },

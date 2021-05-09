@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { posts } from "@/utils/getAllPosts";
 
-import BasicBlogLayout from "@/components/Layout/BasicBlogLayout";
+import BasicBlogLayout from "@/components/Layouts/BasicBlogLayout";
 
 interface BlogProps {
   filePath: string;

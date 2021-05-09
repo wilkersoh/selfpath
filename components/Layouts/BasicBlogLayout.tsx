@@ -1,9 +1,8 @@
 import React from "react";
+import Footer from "@/components/modules/Footer/index";
+import Header from "@/components/modules/Header/BlogHeader";
 
-import Footer from "@/components/Footer/index";
-import Header from "@/components/Header/index";
-
-const HomeLayout: React.FC = ({ children }) => {
+const BasicBlogLayout: React.FC = ({ children }) => {
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />
@@ -15,4 +14,4 @@ const HomeLayout: React.FC = ({ children }) => {
   );
 };
 
-export default HomeLayout;
+export default BasicBlogLayout;

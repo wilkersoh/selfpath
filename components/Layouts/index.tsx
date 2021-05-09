@@ -1,7 +1,7 @@
 import React from "react";
 
-import HomeLayout from "@/components/Layout/HomeLayout";
-import BasicBlogLayout from "@/components/Layout/BasicBlogLayout";
+import HomeLayout from "@/components/Layouts/HomeLayout";
+import BasicBlogLayout from "@/components/Layouts/BasicBlogLayout";
 
 import LayoutProps from "./interface";
 

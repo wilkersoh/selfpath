@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Container from "@/components/Container";
-import Layout from "@/components/Layout";
-import PreviewPost from "@/components/PreviewPost/index";
+import Layout from "@/components/Layouts";
+import PreviewPost from "@/components/templates/Home/PreviewPost/index";
 
 import { posts } from "@/utils/getAllPosts";
 

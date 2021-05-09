@@ -12,7 +12,7 @@ interface PreProps {
 }
 
 const LanguageTag = ({ language }) => (
-  <div className='absolute top-0 -right-3 px-6 py-2 z-10 code-template-bg shadow-md rounded-t-lg text-gray-50 font-bold'>
+  <div className='absolute top-0 -right-3 px-6 py-2 z-10 code-template-bg rounded-t-lg text-gray-50 font-bold'>
     <span className='tracking-wider'>{language}</span>
   </div>
 );
