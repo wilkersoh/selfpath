@@ -15,7 +15,11 @@ module.exports = {
         "brand-black": "#0d141c",
       },
       zIndex: {
+        5: "5",
         "-10": "-10",
+      },
+      transitionProperty: {
+        backdropFilter: "backdrop-filter"
       },
     },
   },

@@ -47,7 +47,7 @@ const MobileNav = ({ onClick, isOpen }: MobileNavProps) => {
       <>
         <Hamburger onClick={onClick} isOpen={isOpen} />
         <div
-          className={`fixed z-10 overflow-hidden inset-0 transition-all duration-1000 backdrop-filter backdrop-blur-0 ${isOpen ? "backdrop-blur-md backdrop-opacity-100 pointer-events-auto" : "pointer-events-none"}`}>
+          className={`fixed z-10 overflow-hidden inset-0 transition-backdropFilter duration-1000 backdrop-filter ${isOpen ? "backdrop-blur-md  pointer-events-auto" : "pointer-events-none"}`}>
           <nav className={`absolute top-28 w-full transition-all duration-1000 ${isOpen ? "left-0" : "-left-full" }`}>
             <ul className='w-full flex flex-col gap-y-7'>
               {LinkPaths.map(({ route, name }) => (
