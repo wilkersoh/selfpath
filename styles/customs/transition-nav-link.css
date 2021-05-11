@@ -1,0 +1,15 @@
+li.navLink-enter {
+  transform: translateX(-100%);
+}
+
+li.navLink-enter-active { transition: 1000ms; }
+li.navLink-enter-active:nth-child(1) { transform: translateX(0%); transition-delay: 0.2s}
+li.navLink-enter-active:nth-child(2) { transform: translateX(0%); transition-delay: 0.45s}
+li.navLink-enter-active:nth-child(3) { transform: translateX(0%); transition-delay: 0.55s;}
+
+li.navLink-exit {}
+li.navLink-exit-active { transform: translateX(-100%); transition: 1000ms; }
+li.navLink-exit-active:nth-child(1) { transition-delay: 0s }
+li.navLink-exit-active:nth-child(2) { transition-delay: 0.25s}
+li.navLink-exit-active:nth-child(3) { transition-delay: 0.45s }
+li.navLink-exit-done { transform: translateX(-100%); }

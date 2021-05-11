@@ -7,7 +7,7 @@ import { posts } from "@/utils/getAllPosts";
 
 export default function Home() {
   const [latestPosts, setLatestPosts] = useState([]);
-  console.log("posts :>> ", posts);
+
   useEffect(() => {
     const getLatest = posts
       .sort((a, b) => {
