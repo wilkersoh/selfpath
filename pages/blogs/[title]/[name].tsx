@@ -5,6 +5,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { posts } from "@/utils/getAllPosts";
 
 import BasicBlogLayout from "@/components/Layouts/BasicBlogLayout";
+import Layout from "@/components/Layouts/index";
 
 interface BlogProps {
   filePath: string;
@@ -25,9 +26,9 @@ const Blog = ({ filePath }: BlogProps) => {
   );
 
   return (
-    <BasicBlogLayout>
+    <Layout type="basic">
       <BlogContent />
-    </BasicBlogLayout>
+    </Layout>
   );
 };
 

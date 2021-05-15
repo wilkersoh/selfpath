@@ -21,13 +21,15 @@ const index: React.FC<MetaPostProps> = ({ children, meta }) => {
   return (
     <>
       <HeadPost meta={meta} />
-      <Container>
-        <MDXProvider components={components}>
-          <article className='red px-2 sm:px-3 md:px-10 lg:px-0'>
-            {children}
-          </article>
-        </MDXProvider>
-      </Container>
+      <div className="mt-4">
+        <Container>
+          <MDXProvider components={components}>
+            <article className='px-2 sm:px-3 md:px-10 lg:px-0'>
+              {children}
+            </article>
+          </MDXProvider>
+        </Container>
+      </div>
     </>
   );
 };
