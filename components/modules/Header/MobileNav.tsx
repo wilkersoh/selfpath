@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import Link from "next/link";
 
 import {LinkPaths} from "@/components/modules/Header/HeaderLinks"
@@ -9,15 +9,15 @@ import { CSSTransition } from "react-transition-group";
 
 import { MobileNavProps } from "./interfaces";
 
-const Modal = ({children, open}) => {
+// const Modal = ({children, open}) => {
 
-  return open
-    ? ReactDOM.createPortal(
-        <div>{children}</div>,
-        document.body
-      )
-    : null;
-}
+//   return open
+//     ? ReactDOM.createPortal(
+//         <div>{children}</div>,
+//         document.body
+//       )
+//     : null;
+// }
 
 
 const MobileNav = ({ onClick, isOpen }: MobileNavProps) => {
@@ -42,33 +42,29 @@ const MobileNav = ({ onClick, isOpen }: MobileNavProps) => {
   // }, [mobileNavRef])
 
   return (
-    <>
-      {/* <Modal open={isOpen}> */}
-      <>
-        <Hamburger onClick={onClick} isOpen={isOpen} />
-        <div
-          className={`fixed z-10 overflow-hidden inset-0 transition-backdropFilter duration-1000 backdrop-filter ${isOpen ? "backdrop-blur-md  pointer-events-auto" : "pointer-events-none"}`}>
-          <nav className={`absolute top-28 w-full transition-all duration-1000 ${isOpen ? "left-0" : "-left-full" }`}>
-            <ul className='w-full flex flex-col gap-y-7'>
-              {LinkPaths.map(({ route, name }) => (
-                <CSSTransition
-                  key={route}
-                  in={isOpen}
-                  timeout={1000}
-                  classNames={"navLink"}>
-                  <li key={route} className='w-4/5 pl-10 block'>
-                    <Link href={route}>
-                      <a className='text-4xl block h-full py-4 '>{name}</a>
-                    </Link>
-                  </li>
-                </CSSTransition>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </>
-      {/* </Modal> */}
-    </>
+    <div className="md:hidden">
+      <Hamburger onClick={onClick} isOpen={isOpen} />
+      <div
+        className={`fixed z-10 overflow-hidden inset-0 transition-backdropFilter duration-1000 ease-in backdrop-filter ${isOpen ? "backdrop-blur-md  pointer-events-auto" : "pointer-events-none"}`}>
+        <nav className={`absolute top-28 w-full transition-all duration-1000 ${isOpen ? "left-0" : "-left-full" }`}>
+          <ul className='w-full flex flex-col gap-y-7'>
+            {LinkPaths.map(({ route, name }) => (
+              <CSSTransition
+                key={route}
+                in={isOpen}
+                timeout={1000}
+                classNames={"navLink"}>
+                <li key={route} className='w-4/5 pl-10 block'>
+                  <Link href={route}>
+                    <a className='text-4xl block h-full py-4 '>{name}</a>
+                  </Link>
+                </li>
+              </CSSTransition>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
   );
 };
 

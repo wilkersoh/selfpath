@@ -2,10 +2,11 @@ import React from "react";
 import Link from "next/link";
 
 import Container from "@/components/Container";
-import Hamburger from "@/components/modules/Header/icons/Hamburger";
+import HeaderLinks from "./HeaderLinks";
 import Selfpaths from "@/components/modules/Header/icons/Selfpaths";
 
 const BlogHeader = () => {
+
   return (
     <div className='relative bg-brand-black '>
       <div className='sticky top-0 z-10'>
@@ -18,10 +19,9 @@ const BlogHeader = () => {
                 </a>
               </Link>
             </div>
-            <nav className='hidden md:block'>i am nav for desktop</nav>
-            <div className='md:hidden ml-auto mr-4'>
-              <Hamburger />
-            </div>
+            <HeaderLinks />
+
+            <div className='md:hidden ml-auto mr-4'>{/*  */}</div>
           </header>
         </Container>
       </div>
