@@ -17,7 +17,7 @@
 .sidebar-transition-enter-active #aside {
   left: 0;
   opacity: 1;
-  transition: opacity 0.65s, left 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: opacity 0.5s, left 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .sidebar-transition-enter-done #aside {
@@ -30,7 +30,7 @@
 }
 .sidebar-transition-enter-active #aside-overlay {
   opacity: 0.5;
-  transition: opacity 0.45s;
+  transition: opacity 0.5s;
 }
 .sidebar-transition-enter-done #aside-overlay {
   opacity: 0.5;
@@ -44,7 +44,7 @@
 /* fires as element leaves the DOM*/
 .sidebar-transition-exit-active #aside {
   left: -100%;
-  transition: left 0.65s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: left 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
 /* after done */
 .sidebar-transition-exit-done #aside {
