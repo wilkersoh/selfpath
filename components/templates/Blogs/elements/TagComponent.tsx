@@ -33,7 +33,12 @@ export const Img = ({ src, alt, title }: ImageProps): JSX.Element => {
   return (
     <div className='flex justify-center'>
       <Zoom overlayBgColorEnd='rgba(10, 10, 10, 0.95)'>
-        <img src={src} alt={alt} className='max-w-2xl cursor-pointer w-full' />
+        <img
+          src={src}
+          alt={alt}
+          title={title}
+          className='max-w-2xl cursor-pointer w-full'
+        />
         {/* <Image
           className='max-w-2xl cursor-pointer w-full'
           src={src}
