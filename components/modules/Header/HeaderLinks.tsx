@@ -5,6 +5,7 @@ import { LinkPathsType } from "@/components/modules/Header/interfaces";
 export const LinkPaths: LinkPathsType[] = [
   { route: "/", name: "首頁" },
   { route: "/blog", name: "文章" },
+  { route: "/stories", name: "我的天地" },
   { route: "/about", name: "關於我" },
 ];
 

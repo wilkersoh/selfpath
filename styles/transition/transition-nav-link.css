@@ -1,0 +1,24 @@
+:root {
+  --delay-link-01: 0.1s;
+  --delay-link-02: 0.23s;
+  --delay-link-03: 0.55s;
+  --delay-link-04: 0.35s;
+}
+
+li.navLink-enter {
+  transform: translateX(-100%);
+}
+
+li.navLink-enter-active { transition: 1000ms cubic-bezier(0.34, 1.56, 0.64, 1);  }
+li.navLink-enter-active:nth-child(1) { transform: translateX(0%); transition-delay: var(--delay-link-01)}
+li.navLink-enter-active:nth-child(2) { transform: translateX(0%); transition-delay: var(--delay-link-02)}
+li.navLink-enter-active:nth-child(3) { transform: translateX(0%); transition-delay: var(--delay-link-03)}
+li.navLink-enter-active:nth-child(4) { transform: translateX(0%); transition-delay: var(--delay-link-04);}
+
+li.navLink-exit {}
+li.navLink-exit-active { transform: translateX(-100%); transition: 1000ms; }
+li.navLink-exit-active:nth-child(1) { transition-delay: var(--delay-link-01) }
+li.navLink-exit-active:nth-child(2) { transition-delay: var(--delay-link-02)}
+li.navLink-exit-active:nth-child(3) { transition-delay: var(--delay-link-03) }
+li.navLink-exit-active:nth-child(4) { transition-delay: var(--delay-link-04) }
+li.navLink-exit-done { transform: translateX(-100%); }
