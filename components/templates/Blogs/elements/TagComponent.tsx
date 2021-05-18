@@ -22,7 +22,17 @@ export const H2 = ({ children }): JSX.Element => <HeadingDOM children={children}
 
 export const H3 = ({ children }): JSX.Element => <HeadingDOM children={children} type='h3' />
 
-export const P = ({ children }): JSX.Element => <p className='text-lg mb-6'>{children}</p>
+export const P = ({ children }): JSX.Element => {
+  /**
+   * Render image element with use <p></p> in it's parent in default
+   */
+  if (children?.props?.mdxType === "img")
+    return <div className='text-lg mb-6'>{children}</div>;
+
+  return (
+      <p className='text-lg mb-6'>{children}</p>
+  );
+}
 
 export const A = ({href, children} ): JSX.Element => <a href={href} className='text-lg pb-2 mark-link'>{children}</a>
 
