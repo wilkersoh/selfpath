@@ -1,7 +1,7 @@
 import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import HeadPost from "@/components/templates/Blogs/_HeadPost";
-import { H1, H2, H3, P, A} from "./elements/TagComponent";
+import { H1, H2, H3, P, A, Img} from "./elements/TagComponent";
 import Container from "@/components/Container";
 
 import { MetaPostProps } from "./interfaces";
@@ -14,7 +14,9 @@ const components = {
   h3: H3,
   p: P,
   a: A,
-  code: CodeTemplate,
+  img: Img,
+  code: CodeTemplate, // this should be Pre
+  // inlineCode: Code,
 };
 
 const index: React.FC<MetaPostProps> = ({ children, meta }) => {
