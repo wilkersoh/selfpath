@@ -8,7 +8,6 @@ import { MetaPostProps } from "./interfaces";
 import CodeTemplate from "./CodeTemplate";
 
 const components = {
-  // img: Image,
   h1: H1,
   h2: H2,
   h3: H3,

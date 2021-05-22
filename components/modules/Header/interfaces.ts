@@ -1,6 +1,7 @@
 export interface LinkPathsType {
   route: string;
   name: string;
+  isSubtitle: boolean;
 }
 
 export interface MobileNavProps {

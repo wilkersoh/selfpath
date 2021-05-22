@@ -16,8 +16,18 @@ const index = () => {
           下面顯示日期
           only available in mobile view
         */}
+        <Story />
       </Container>
     </Layout>
+  );
+}
+
+const Story = () => {
+  return (
+    <div className='red w-32 h-32 rounded-full relative'>
+      <div>Test</div>
+      <div style={{width: "60px", height: "60px", position: "absolute", left: "50%", bottom: "-10px", transform: "translateX(-50%)"}} className="blue"></div>
+    </div>
   );
 }
 
