@@ -1,16 +1,21 @@
+:root {
+  --menu-bar-rotate: 40deg;
+  --menu-bar-timming: 750ms ease-in-out;
+}
+
 .hambuger-icon {
   width: 50px;
-  height: 35px;
+  height: 30px;
   position: relative;
   transform: rotate(0deg);
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
 .hambuger-icon span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 4px;
   width: 100%;
   background: #fff;
   border-radius: 4px;
@@ -19,79 +24,78 @@
   transform: rotate(0deg);
 }
 
-.hambuger-icon span:nth-child(1) {
-  top: 0px;
+/* Animation position after clicked */
+.hambuger-icon span {
   transform-origin: left center;
+}
+
+.hambuger-icon span:nth-child(1) {
+  top: -1px;
 }
 
 .hambuger-icon span:nth-child(2) {
-  top: 18px;
-  transform-origin: left center;
+  top: 14px;
 }
 
 .hambuger-icon span:nth-child(3) {
-  top: 36px;
-  transform-origin: left center;
+  top: 31px;
 }
 
 /* React transition */
-
 .hambuger-icon-enter-active span:nth-child(1) {
-  transform: rotate(45deg);
-  transition: 750ms ease-in-out;
+  transform: rotate(var(--menu-bar-rotate));
+  transition: var(--menu-bar-timming);
 }
 .hambuger-icon-enter-active span:nth-child(2) {
   width: 0%;
   opacity: 0;
-  transition: 750ms ease-in-out;
+  transition: var(--menu-bar-timming);
 }
 .hambuger-icon-enter-active span:nth-child(3) {
-  transform: rotate(-45deg);
-  transition: 750ms ease-in-out;
+  transform: rotate(calc(var(--menu-bar-rotate) * -1));
+  transition: var(--menu-bar-timming);
 }
 
 .hambuger-icon-enter-done span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(var(--menu-bar-rotate));
 }
 .hambuger-icon-enter-done span:nth-child(2) {
   width: 0%;
 }
 .hambuger-icon-enter-done span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(calc(var(--menu-bar-rotate) * -1));
+  top: 31px;
 }
 /* exit */
 .hambuger-icon-exit span:nth-child(1) {
-  transform: rotate(45deg);
+  transform: rotate(40deg);
 }
 .hambuger-icon-exit span:nth-child(2) {
-  width: 0%;
   opacity: 0;
 }
 .hambuger-icon-exit span:nth-child(3) {
-  transform: rotate(-45deg);
+  transform: rotate(calc(var(--menu-bar-rotate) * -1));
 }
+
 .hambuger-icon-exit-active span:nth-child(1) {
   transform: rotate(0deg);
-  transition: 750ms ease-in-out;
+  transition: var(--menu-bar-timming);
 }
 .hambuger-icon-exit-active span:nth-child(2) {
-  width: 100%;
   opacity: 1;
-  transition: 750ms ease-in-out;
+  transition: var(--menu-bar-timming);
 }
 .hambuger-icon-exit-active span:nth-child(3) {
   transform: rotate(0deg);
-  transition: 750ms ease-in-out;
+  transition: var(--menu-bar-timming);
 }
 
 .hambuger-icon-exit-done span:nth-child(1) {
   transform: rotate(0deg);
 }
 .hambuger-icon-exit-done span:nth-child(2) {
-  width: 100%;
   opacity: 1;
 }
 .hambuger-icon-exit-done span:nth-child(3) {
   transform: rotate(0deg);
 }
-
