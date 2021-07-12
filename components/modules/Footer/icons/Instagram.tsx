@@ -1,8 +1,8 @@
 import { FooterIconsProps } from "@/components/modules/Footer/icons/interface";
 
 const Instagram: React.FC<FooterIconsProps> = ({
-  width = "w-20",
-  height = "h-20",
+  width = "w-12",
+  height = "h-12",
 }) => {
   return (
     <svg
