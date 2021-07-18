@@ -14,7 +14,7 @@ const index = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className='flex flex-col h-64 main-footer-bg text-center'>
+    <footer className='flex flex-col min-h-72 main-footer-bg text-center'>
       <div className='flex justify-center py-8 md:py-10 space-x-10'>
         <a
           href='https://github.com/wilkersoh'
@@ -32,7 +32,7 @@ const index = () => {
       <div className='flex'>
         <FooterLinks links={LINKS} />
       </div>
-      <div className='mt-auto pb-10 text-red-50'>
+      <div className='mt-auto pb-10 text-red-100'>
         &copy; Copyright {year}. Wilker Soh
       </div>
     </footer>
@@ -43,8 +43,8 @@ const FooterLinks = ({ links }) => {
   return (
     <ul className='flex justify-around px-4 md:w-1/2 mx-auto'>
       {Object.entries(links).map(([k, v], i) => (
-        <li>
-          <Link key={i} href={v}>
+        <li key={i}>
+          <Link href={v}>
             <a className='capitalize'>{k}</a>
           </Link>
         </li>

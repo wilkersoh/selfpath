@@ -19,8 +19,11 @@ module.exports = {
         "-10": "-10",
       },
       transitionProperty: {
-        backdropFilter: "backdrop-filter"
+        backdropFilter: "backdrop-filter",
       },
+      minHeight: theme => ({
+        ...theme('spacing')
+      })
     },
   },
   variants: {

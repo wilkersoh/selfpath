@@ -34,7 +34,9 @@ const HeaderContent = () => (
         <HeaderLinks />
       </header>
       <div className='flex py-8 mt-6 justify-center items-center'>
-        <h2 className='h1-title text-center'>Want to learn how to code?</h2>
+        <h2 className='h1-title text-center bg-gradient-to-r text-transparent to-cyan-300 from-blue-500 bg-clip-text font-bold uppercase'>
+          Want to learn how to code?
+        </h2>
       </div>
     </Container>
   </div>
